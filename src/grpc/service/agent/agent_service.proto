@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package agent;
+
+service AgentService{
+    // login rpc
+    rpc Login(LoginRequest) returns (LoginReply) {}
+}
+
+message LoginRequest{
+    string token = 1;
+}
+
+message LoginReply{
+    bool sucess = 1;
+}
